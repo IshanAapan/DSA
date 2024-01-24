@@ -5,7 +5,7 @@ int main(){
 	int num[15];
 
 	
-	//(1) accessing an array
+	//(1) if value is not intialised, accessing an array
 	// cout<<"Value at index 14"<<num[14];    //garbage vaue
 
 
