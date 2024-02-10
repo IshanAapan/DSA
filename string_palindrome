@@ -1,0 +1,19 @@
+#include <bits/stdc++.h> 
+using namespace std; 
+
+bool checkPalindrome(const string& s)
+{
+    vector<char>v(s.begin(),s.end());
+    std::reverse(v.begin(),v.end());
+    bool areEqual = std::equal(s.begin(), s.end(), v.begin());
+    if(areEqual){
+        return "Yes";
+    }
+    return "No";
+}
+int main(){
+    string s ="naman";
+    bool result = checkPalindrome(s);
+    cout<<"Result are:->"<<result;
+    return 0;
+}
