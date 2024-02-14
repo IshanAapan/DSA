@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[10] = {1,2,3,4,5,6,7,8,9,10};
+    
+// Values:-
+    cout<<"1Value of 0th index is:->"<<*arr<<endl;
+    cout<<"2Value of 0th index is:->"<<arr[0]<<endl;
+    
+// Address:-
+    cout<<"1Address of 0th index is:->"<<arr<<endl;
+    cout<<"2Address of 0th index is:->"<<&arr<<endl;
+    cout<<"3Address of 0th index is:->"<<&arr[0]<<endl;
+    
+// increement in values
+    cout<<"1 Increement in values:->"<<*arr+1<<endl;
+    
+// increement in address
+    cout<<"1 Increement in address:->"<<arr+1<<endl;
+    
+    int *ptr = &arr[3];
+    cout<<"Address of ptr 1:->"<<ptr<<endl;
+    cout<<"Address of 1st index:->"<<&arr[1]<<endl;
+    cout<<"Value of 3rd index is:->"<<arr[3]<<endl;
+    cout<<"Value of 3rd index is:->"<<*ptr<<endl;
+    cout<<"Value of 6th index is:->"<<*(arr+6)<<endl;
+    cout<<"Address of 6th index is:->"<<(arr+6);
+    cout<<"Address of 6th index is:->"<<&arr[6]<<endl;
+    
+// Sizeof():-
+    cout<<"Value 1:->"<<sizeof(*arr)<<endl;
+    cout<<"Address of 1st index are:->"<<sizeof(&arr[0]);
+    return 0;
+}
