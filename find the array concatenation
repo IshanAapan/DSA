@@ -1,0 +1,34 @@
+class Solution {
+public:
+    int countDigits(int num){
+        int count = 0;
+        while(num!=0){
+            num = num/10;
+            count+=1;
+        }
+        return count;
+    }
+    long long findTheArrayConcVal(vector<int>& nums) {
+        std::size_t len = nums.size();
+        long long addConcat = 0;
+        long long conversion=0;
+        while (nums.size() != 0) {
+            int i = 0, j = nums.size() - 1;
+            if (i == j) {
+                conversion = nums[i];
+                addConcat = addConcat + conversion;
+                nums.pop_back();
+            } else {
+                // string str1 = to_string(nums[i]);
+                // string str2 = to_string(nums[j]);
+                // string concat = str1 + str2;
+                // conversion = stoi(concat);
+                conversion = (nums[i]*pow(10,countDigits(nums[j])))+nums[j];        //Concatenation of 2 nos without string conversion
+                addConcat = addConcat + conversion;
+                nums.erase(nums.begin());
+                nums.pop_back();
+            }
+        }
+        return addConcat;
+    }
+};
