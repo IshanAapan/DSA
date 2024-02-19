@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+void increement(int &n){
+    n+=1;
+    cout<<"Inside"<<n<<endl;
+}
+
+// int main() {
+//     int i = 5;
+    
+//     int &j = i;         //create reference variable
+    
+//     cout<<i<<endl;
+//     cout<<j<<endl;
+//     i++;
+//     cout<<i<<endl;
+//     cout<<j<<endl;
+//     j++;
+//     cout<<i<<endl;
+//     cout<<j<<endl;
+
+
+// Reference Variable with function
+int main(){
+    int num = 5;
+    cout<<"Before:-"<<num<<endl;
+    increement(num);
+    cout<<"After:-"<<num<<endl;
+    return 0;
+}
