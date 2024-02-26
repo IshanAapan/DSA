@@ -11,10 +11,10 @@ int main(){
     int start=0,end=n-1,sum = 0;
     int ans = INT_MIN;
     for(int i=0;i<n;i++){
-        sum+=v[i];
+        sum+=v[i];                // include right part element
         if(i-start+1==k){
             ans=max(ans,sum);
-            sum-=v[start];
+            sum-=v[start];        //exclude left part element
             start++;
         }
     }
