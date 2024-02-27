@@ -16,7 +16,7 @@ void maxSum_of_subArray(vector <int>v,int n,int k){
     cout<<"Max:->"<<ans;
 }
 
-pair<int,int> range_maxSum_subArray(vector <int>v,int n,int k){
+void range_maxSum_subArray(vector <int>v,int n,int k){
     int sum = 0,start  = 0,prevSum=-1;
     pair<int,int>p;
     for(int i=0;i<n;i++){
